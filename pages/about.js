@@ -11,6 +11,7 @@
 
 
 import { useState } from 'react';
+import Image from 'next/image'
 
 const divisions = [
   {
@@ -71,10 +72,12 @@ export default function About() {
   return (
     <div className="relative overflow-hidden min-h-screen bg-white">
       {/* Watermark */}
-      <img
+      <Image
         src="/logo.png"
         alt="CT IT Logo Watermark"
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 w-[70%] max-w-[500px] pointer-events-none select-none z-0"
+        width={500}       // approximate width in pixels
+        height={500}      // approximate height in pixels
       />
 
       {/* Main Content */}

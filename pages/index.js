@@ -1,3 +1,6 @@
+import Link from 'next/link'
+
+
 export default function Home() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
@@ -7,12 +10,12 @@ export default function Home() {
       <p className="text-gray-700 text-lg mb-6">
         We build intelligent solutions across hardware, software, and AI.
       </p>
-      <a
+      <Link
         href="/contact"
         className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
       >
         Get Started
-      </a>
+      </Link>
 
       <div className="mt-16">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4">About Us</h2>
@@ -42,12 +45,12 @@ export default function Home() {
         <p className="text-gray-600 mb-4">
           Want to collaborate or need a custom solution? Let’s talk.
         </p>
-        <a
+        <Link
           href="/contact"
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
         >
           Contact Us
-        </a>
+        </Link>
       </div>
     </section>
   )
