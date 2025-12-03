@@ -48,6 +48,7 @@ const divisions = [
 - Health Solutions: Medical tech and software.
 - Paper Recycling.
 - Leather Recycling.
+- Plastic Recycling.
     `
   },
   {

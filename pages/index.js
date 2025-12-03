@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-
 export default function Home() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
@@ -20,7 +19,7 @@ export default function Home() {
       <div className="mt-16">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4">About Us</h2>
         <p className="text-gray-600 mb-6">
-          CT Integrated Technologies is a Nigerian-based startup using smart IoT, energy meters, and AI-powered systems
+          CT Integrated Technologies is a Nigerian-based startup using smart IoT, Intelligent Systems and AI-powered systems
           to solve real-world challenges in utilities, agriculture, and sustainability.
         </p>
       </div>
