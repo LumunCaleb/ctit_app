@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="cctv-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1838"/><stop offset="1" stop-color="#142a63"/></linearGradient>
+<pattern id="cctv-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/></pattern>
+<radialGradient id="cctv-go"><stop offset="0" stop-color="#f7841a" stop-opacity="0.25"/><stop offset="1" stop-color="#f7841a" stop-opacity="0"/></radialGradient>
+<radialGradient id="cctv-gb"><stop offset="0" stop-color="#5b8af9" stop-opacity="0.2"/><stop offset="1" stop-color="#5b8af9" stop-opacity="0"/></radialGradient>
+<radialGradient id="cctv-lamp"><stop offset="0" stop-color="#fdba74" stop-opacity="0.55"/><stop offset="1" stop-color="#fdba74" stop-opacity="0"/></radialGradient>
+<linearGradient id="cctv-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24428f"/><stop offset="1" stop-color="#1a3480"/></linearGradient>
+<linearGradient id="cctv-win" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdba74"/><stop offset="1" stop-color="#f7841a"/></linearGradient>
+<linearGradient id="cctv-cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#93b4fd" stop-opacity="0.4"/><stop offset="1" stop-color="#93b4fd" stop-opacity="0"/></linearGradient>
+<linearGradient id="cctv-cone2" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#93b4fd" stop-opacity="0.4"/><stop offset="1" stop-color="#93b4fd" stop-opacity="0"/></linearGradient>
+<linearGradient id="cctv-scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#93b4fd" stop-opacity="0"/><stop offset="1" stop-color="#93b4fd" stop-opacity="0.35"/></linearGradient>
+<pattern id="cctv-razor" width="20" height="16" patternUnits="userSpaceOnUse"><path d="M0 14L10 3L20 14" fill="none" stroke="#64748b" stroke-width="1.5"/><circle cx="10" cy="3" r="1.5" fill="#93b4fd"/></pattern>
+<filter id="cctv-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#050b1f" flood-opacity="0.55"/></filter>
+</defs>
+<style>
+.cctv-pan1{transform-box:fill-box;transform-origin:50% 0;animation:cctv-pan1 7s ease-in-out infinite alternate}
+@keyframes cctv-pan1{from{transform:rotate(-20deg)}to{transform:rotate(20deg)}}
+.cctv-lens{transform-box:fill-box;transform-origin:center;animation:cctv-lens 7s ease-in-out infinite alternate}
+@keyframes cctv-lens{from{transform:translateX(5px)}to{transform:translateX(-5px)}}
+.cctv-pan2{transform-box:view-box;transform-origin:108px 214px;animation:cctv-pan2 6s ease-in-out infinite alternate}
+@keyframes cctv-pan2{from{transform:rotate(-34deg)}to{transform:rotate(-10deg)}}
+.cctv-rec{animation:cctv-blink 1.2s steps(2,start) infinite}
+.cctv-r2{animation-delay:.3s}.cctv-r3{animation-delay:.6s}.cctv-r4{animation-delay:.9s}
+@keyframes cctv-blink{0%,100%{opacity:1}50%{opacity:.15}}
+.cctv-scanline{animation:cctv-scan 4s linear infinite}
+@keyframes cctv-scan{from{transform:translateY(0)}to{transform:translateY(152px)}}
+.cctv-flow{stroke-dasharray:3 9;animation:cctv-dash 1.2s linear infinite}
+@keyframes cctv-dash{to{stroke-dashoffset:-24}}
+.cctv-led{animation:cctv-led 1.6s ease-in-out infinite}
+.cctv-l2{animation-delay:.7s}
+@keyframes cctv-led{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="800" height="600" fill="url(#cctv-bg)"/>
+<rect width="800" height="600" fill="url(#cctv-grid)"/>
+<circle cx="150" cy="470" r="360" fill="url(#cctv-go)"/>
+<circle cx="660" cy="120" r="300" fill="url(#cctv-gb)"/>
+<circle cx="232" cy="64" r="44" fill="url(#cctv-lamp)" opacity="0.6"/>
+<circle cx="232" cy="64" r="16" fill="#fdba74"/><circle cx="238" cy="58" r="14" fill="#142a63" opacity="0.35"/>
+<g fill="#dbe6fe" opacity="0.6"><circle cx="60" cy="50" r="1.5"/><circle cx="140" cy="96" r="1.2"/><circle cx="360" cy="40" r="1.5"/><circle cx="440" cy="84" r="1.2"/><circle cx="560" cy="40" r="1.4"/><circle cx="780" cy="60" r="1.2"/></g>
+<!-- ground -->
+<rect y="500" width="800" height="100" fill="#0b1838" opacity="0.6"/>
+<rect y="500" width="800" height="18" fill="#1a3480"/><rect y="518" width="800" height="4" fill="#334155"/>
+<path d="M40 500V518M120 500V518M200 500V518M280 500V518M360 500V518M440 500V518M520 500V518M600 500V518M680 500V518M760 500V518" stroke="#142a63" stroke-width="2"/>
+<path d="M0 562H800" stroke="#64748b" stroke-width="3" stroke-dasharray="30 20" opacity="0.4"/>
+<g fill="#22a04b" opacity="0.8"><path d="M540 500q4 -12 8 0q4 -14 8 0q4 -10 8 0z"/><path d="M640 500q4 -12 8 0q4 -14 8 0z"/><path d="M720 500q4 -12 8 0q4 -14 8 0q4 -10 8 0z"/></g>
+<!-- building -->
+<g filter="url(#cctv-sh)">
+<polygon points="450,148 474,136 474,398 450,412" fill="#142a63"/>
+<rect x="120" y="148" width="330" height="264" fill="url(#cctv-wall)"/>
+<rect x="110" y="130" width="350" height="18" rx="3" fill="#334155"/>
+<polygon points="460,130 482,120 482,136 460,148" fill="#1e293b"/>
+</g>
+<g stroke="#93b4fd" stroke-width="2">
+<rect x="150" y="180" width="76" height="58" rx="4" fill="url(#cctv-win)"/>
+<rect x="245" y="180" width="76" height="58" rx="4" fill="#0b1838"/>
+<rect x="340" y="180" width="76" height="58" rx="4" fill="url(#cctv-win)"/>
+<rect x="150" y="266" width="76" height="58" rx="4" fill="#0b1838"/>
+<rect x="245" y="266" width="76" height="58" rx="4" fill="#0b1838"/>
+<rect x="340" y="266" width="76" height="58" rx="4" fill="url(#cctv-win)"/>
+<path d="M188 180V238M283 180V238M378 180V238M188 266V324M283 266V324M378 266V324" fill="none"/>
+</g>
+<path d="M254 196l14 -10M254 282l14 -10M159 282l14 -10" stroke="#5b8af9" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+<rect x="253" y="342" width="64" height="70" rx="3" fill="#0b1838"/>
+<path d="M243 342h84l-8 -12h-68z" fill="#f7841a"/>
+<circle cx="306" cy="380" r="3" fill="#fbbf24"/>
+<!-- conduit -->
+<path d="M110 214H122V158H462V372H496" fill="none" stroke="#334155" stroke-width="8" stroke-linejoin="round"/>
+<path d="M110 214H122V158H462V372H496" fill="none" stroke="#5b8af9" stroke-width="2" class="cctv-flow"/>
+<g fill="#64748b"><rect x="196" y="153" width="6" height="10" rx="1"/><rect x="300" y="153" width="6" height="10" rx="1"/><rect x="457" y="240" width="10" height="6" rx="1"/><rect x="457" y="320" width="10" height="6" rx="1"/></g>
+<!-- dome camera -->
+<polygon points="420,164 348,432 492,432" fill="url(#cctv-cone)" class="cctv-pan1"/>
+<rect x="404" y="150" width="32" height="8" rx="2" fill="#dbe6fe"/>
+<path d="M406 158A14 14 0 0 0 434 158Z" fill="#f1f5f9" stroke="#93b4fd" stroke-width="1.5"/>
+<g class="cctv-lens"><circle cx="420" cy="164" r="5" fill="#0b1838"/><circle cx="421.5" cy="162.5" r="1.5" fill="#93b4fd"/></g>
+<circle cx="430" cy="154" r="1.8" fill="#ef4444" class="cctv-rec"/>
+<!-- bullet camera -->
+<rect x="120" y="204" width="6" height="20" rx="1" fill="#dbe6fe"/>
+<path d="M122 214H106" stroke="#dbe6fe" stroke-width="5" stroke-linecap="round"/>
+<g class="cctv-pan2">
+<polygon points="56,214 -240,124 -240,304" fill="url(#cctv-cone2)"/>
+<rect x="52" y="199" width="58" height="8" rx="3" fill="#dbe6fe"/>
+<rect x="56" y="205" width="52" height="18" rx="6" fill="#f1f5f9" stroke="#93b4fd" stroke-width="1.5"/>
+<rect x="54" y="207" width="8" height="14" rx="2" fill="#0b1838"/>
+<circle cx="98" cy="214" r="1.8" fill="#ef4444" class="cctv-rec cctv-r2"/>
+</g>
+<!-- compound wall with razor wire -->
+<rect y="376" width="488" height="16" fill="url(#cctv-razor)"/>
+<rect y="392" width="488" height="10" fill="#64748b"/>
+<rect y="402" width="488" height="98" fill="#334155"/>
+<path d="M0 426H488M0 452H488M0 476H488M60 402V426M200 402V426M380 402V426M30 426V452M240 426V452M420 426V452M90 452V476M200 452V476M380 452V476" stroke="#0b1838" stroke-width="2" opacity="0.35"/>
+<g fill="#64748b"><rect x="120" y="370" width="30" height="130"/><rect x="300" y="370" width="30" height="130"/><rect x="458" y="370" width="30" height="130"/></g>
+<g fill="#93b4fd"><rect x="116" y="364" width="38" height="8" rx="2"/><rect x="296" y="364" width="38" height="8" rx="2"/><rect x="454" y="364" width="38" height="8" rx="2"/></g>
+<circle cx="315" cy="350" r="46" fill="url(#cctv-lamp)"/>
+<rect x="306" y="342" width="18" height="18" rx="4" fill="#fdba74"/><rect x="304" y="338" width="22" height="5" rx="2" fill="#334155"/>
+<!-- desk -->
+<rect x="500" y="398" width="10" height="102" fill="#334155"/><rect x="762" y="398" width="10" height="102" fill="#334155"/>
+<rect x="486" y="380" width="300" height="12" rx="3" fill="#64748b"/>
+<rect x="492" y="392" width="288" height="8" fill="#334155"/>
+<!-- NVR -->
+<rect x="494" y="350" width="96" height="30" rx="4" fill="#334155" stroke="#64748b" stroke-width="2"/>
+<circle cx="506" cy="365" r="2.5" fill="#4ade80" class="cctv-led"/><circle cx="516" cy="365" r="2.5" fill="#5b8af9"/><circle cx="526" cy="365" r="2.5" fill="#f7841a" class="cctv-led cctv-l2"/>
+<path d="M544 358V372M550 358V372M556 358V372M562 358V372M568 358V372M574 358V372" stroke="#0b1838" stroke-width="2"/>
+<path d="M590 366Q612 366 628 336" fill="none" stroke="#334155" stroke-width="3"/>
+<rect x="690" y="370" width="70" height="10" rx="3" fill="#334155"/>
+<path d="M696 375H754" stroke="#64748b" stroke-width="3" stroke-dasharray="4 2"/>
+<ellipse cx="774" cy="375" rx="6" ry="4" fill="#334155"/>
+<!-- monitor -->
+<rect x="626" y="290" width="18" height="84" fill="#334155"/>
+<rect x="596" y="372" width="78" height="8" rx="4" fill="#64748b"/>
+<g filter="url(#cctv-sh)"><rect x="496" y="92" width="278" height="202" rx="12" fill="#0b1838" stroke="#5b8af9" stroke-width="2"/></g>
+<rect x="508" y="104" width="254" height="166" rx="6" fill="#142a63"/>
+<g fill="#1a3480"><rect x="512" y="108" width="119" height="76" rx="4"/><rect x="639" y="108" width="119" height="76" rx="4"/><rect x="512" y="190" width="119" height="76" rx="4"/><rect x="639" y="190" width="119" height="76" rx="4"/></g>
+<!-- feed 1 building -->
+<rect x="530" y="132" width="40" height="52" fill="#3563ea"/><rect x="574" y="146" width="36" height="38" fill="#142a63"/>
+<g fill="#fdba74"><rect x="537" y="140" width="8" height="8"/><rect x="553" y="140" width="8" height="8"/><rect x="553" y="156" width="8" height="8"/><rect x="582" y="154" width="7" height="7"/></g>
+<!-- feed 2 road + car -->
+<polygon points="660,184 738,184 706,138 692,138" fill="#142a63"/>
+<path d="M699 144V152M699 160V170M699 176V184" stroke="#fbbf24" stroke-width="2"/>
+<rect x="704" y="158" width="30" height="13" rx="4" fill="#5b8af9"/><circle cx="711" cy="172" r="3" fill="#0b1838"/><circle cx="727" cy="172" r="3" fill="#0b1838"/>
+<rect x="710" y="152" width="18" height="8" rx="3" fill="#93b4fd"/>
+<!-- feed 3 person detection -->
+<circle cx="570" cy="220" r="8" fill="#93b4fd"/>
+<path d="M555 266Q555 234 570 232Q585 234 585 266Z" fill="#93b4fd"/>
+<rect x="548" y="204" width="44" height="60" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="4 3"/>
+<!-- feed 4 tree + wall -->
+<circle cx="672" cy="222" r="16" fill="#22a04b" opacity="0.85"/><rect x="670" y="236" width="4" height="24" fill="#64748b"/>
+<rect x="692" y="236" width="60" height="26" fill="#334155"/><path d="M692 236l6 -6 6 6 6 -6 6 6 6 -6 6 6 6 -6 6 6 6 -6 6 6" fill="none" stroke="#64748b" stroke-width="1.5"/>
+<!-- rec dots -->
+<circle cx="521" cy="117" r="3" fill="#ef4444" class="cctv-rec"/><circle cx="648" cy="117" r="3" fill="#ef4444" class="cctv-rec cctv-r2"/>
+<circle cx="521" cy="199" r="3" fill="#ef4444" class="cctv-rec cctv-r3"/><circle cx="648" cy="199" r="3" fill="#ef4444" class="cctv-rec cctv-r4"/>
+<g fill="#dbe6fe" opacity="0.5"><rect x="528" y="115" width="18" height="4" rx="2"/><rect x="655" y="115" width="18" height="4" rx="2"/><rect x="528" y="197" width="18" height="4" rx="2"/><rect x="655" y="197" width="18" height="4" rx="2"/></g>
+<g class="cctv-scanline"><rect x="508" y="104" width="254" height="14" fill="url(#cctv-scan)"/><rect x="508" y="117" width="254" height="2" fill="#93b4fd" opacity="0.7"/></g>
+<circle cx="520" cy="282" r="3" fill="#4ade80"/>
+<rect x="530" y="280" width="60" height="4" rx="2" fill="#93b4fd" opacity="0.6"/>
+<rect x="700" y="280" width="56" height="4" rx="2" fill="#334155"/><rect x="700" y="280" width="36" height="4" rx="2" fill="#f7841a"/>
+</svg>

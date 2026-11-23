@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="solm-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1838"/><stop offset="1" stop-color="#142a63"/></linearGradient>
+<pattern id="solm-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/></pattern>
+<radialGradient id="solm-go"><stop offset="0" stop-color="#f7841a" stop-opacity="0.25"/><stop offset="1" stop-color="#f7841a" stop-opacity="0"/></radialGradient>
+<radialGradient id="solm-gb"><stop offset="0" stop-color="#5b8af9" stop-opacity="0.2"/><stop offset="1" stop-color="#5b8af9" stop-opacity="0"/></radialGradient>
+<linearGradient id="solm-shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f5f9"/><stop offset="1" stop-color="#dbe6fe"/></linearGradient>
+<linearGradient id="solm-pv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3563ea"/><stop offset="1" stop-color="#1a3480"/></linearGradient>
+<filter id="solm-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#050b1f" flood-opacity="0.55"/></filter>
+<radialGradient id="solm-sun"><stop offset="0" stop-color="#fbbf24" stop-opacity=".7"/><stop offset=".5" stop-color="#f7841a" stop-opacity=".25"/><stop offset="1" stop-color="#f7841a" stop-opacity="0"/></radialGradient>
+<linearGradient id="solm-disc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f7841a"/></linearGradient>
+<linearGradient id="solm-gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a3480"/><stop offset="1" stop-color="#0b1838"/></linearGradient>
+<linearGradient id="solm-ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7841a" stop-opacity=".35"/><stop offset="1" stop-color="#f7841a" stop-opacity="0"/></linearGradient>
+</defs>
+<style>
+
+.solm-glow{transform-box:fill-box;transform-origin:center;animation:solm-glow 4s ease-in-out infinite}
+@keyframes solm-glow{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.15);opacity:1}}
+.solm-rays{transform-box:fill-box;transform-origin:center;animation:solm-spin 24s linear infinite}
+@keyframes solm-spin{to{transform:rotate(360deg)}}
+.solm-flow{animation:solm-dash 1.4s linear infinite}
+@keyframes solm-dash{to{stroke-dashoffset:-32}}
+.solm-wave{animation:solm-pulse 2.4s ease-in-out infinite}
+.solm-w2{animation-delay:.4s}.solm-w3{animation-delay:.8s}
+@keyframes solm-pulse{0%,100%{opacity:.15}40%{opacity:1}}
+.solm-curve{animation:solm-draw 6s ease-in-out infinite}
+@keyframes solm-draw{0%{stroke-dashoffset:100}50%,100%{stroke-dashoffset:0}}
+.solm-area{animation:solm-fade 6s ease-in-out infinite}
+@keyframes solm-fade{0%,10%{opacity:0}50%,100%{opacity:1}}
+.solm-bat{transform-box:fill-box;transform-origin:0 50%;animation:solm-charge 5s ease-in-out infinite}
+@keyframes solm-charge{0%{transform:scaleX(.35)}70%,100%{transform:scaleX(1)}}
+.solm-card{animation:solm-float 7s ease-in-out infinite}
+@keyframes solm-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.solm-glint{animation:solm-glint 5s ease-in-out infinite}
+@keyframes solm-glint{0%,100%{opacity:.05}50%{opacity:.22}}
+.solm-blink{animation:solm-blink 1.4s ease-in-out infinite}
+@keyframes solm-blink{0%,100%{opacity:1}50%{opacity:.2}}
+.solm-cloud{animation:solm-drift 14s ease-in-out infinite}
+@keyframes solm-drift{0%,100%{transform:translateX(0)}50%{transform:translateX(30px)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="800" height="600" fill="url(#solm-bg)"/>
+<rect width="800" height="600" fill="url(#solm-grid)"/>
+<circle cx="160" cy="140" r="330" fill="url(#solm-go)"/><circle cx="640" cy="320" r="300" fill="url(#solm-gb)"/>
+
+<circle class="solm-glow" cx="130" cy="120" r="120" fill="url(#solm-sun)"/>
+<path class="solm-rays" d="M188 120L204 120M180.2 149L194.1 157M159 170.2L167 184.1M130 178L130 194M101 170.2L93 184.1M79.8 149L65.9 157M72 120L56 120M79.8 91L65.9 83M101 69.8L93 55.9M130 62L130 46M159 69.8L167 55.9M180.2 91L194.1 83" stroke="#fbbf24" stroke-width="5" stroke-linecap="round" fill="none"/>
+<circle cx="130" cy="120" r="44" fill="url(#solm-disc)"/><circle cx="118" cy="106" r="14" fill="#fff" opacity=".25"/>
+<g class="solm-cloud"><g opacity="0.18" transform="translate(270 120) scale(1)"><rect x="0" y="16" width="120" height="30" rx="15" fill="#93b4fd"/><circle cx="42" cy="18" r="22" fill="#93b4fd"/><circle cx="74" cy="14" r="28" fill="#93b4fd"/></g><g opacity="0.12" transform="translate(380 190) scale(0.7)"><rect x="0" y="16" width="120" height="30" rx="15" fill="#93b4fd"/><circle cx="42" cy="18" r="22" fill="#93b4fd"/><circle cx="74" cy="14" r="28" fill="#93b4fd"/></g></g>
+<path d="M0 372C120 330 220 350 320 362S520 320 640 338S760 352 800 344V600H0Z" fill="#142a63"/>
+<path d="M0 392C160 372 300 386 440 380S700 370 800 384V600H0Z" fill="url(#solm-gr)"/>
+<path d="M30 520l4-12l3 12l4-9l2 9" fill="none" stroke="#22a04b" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<path d="M210 560l4-12l3 12l4-9l2 9" fill="none" stroke="#22a04b" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<path d="M380 530l4-12l3 12l4-9l2 9" fill="none" stroke="#22a04b" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<path d="M560 570l4-12l3 12l4-9l2 9" fill="none" stroke="#22a04b" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<path d="M740 520l4-12l3 12l4-9l2 9" fill="none" stroke="#22a04b" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<path d="M700 580l4-12l3 12l4-9l2 9" fill="none" stroke="#22a04b" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<path d="M120 580l4-12l3 12l4-9l2 9" fill="none" stroke="#22a04b" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<path d="M125 410V448H620M315 410V448M505 410V448" fill="none" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
+<ellipse cx="130" cy="478" rx="100" ry="9" fill="#050b1f" opacity=".45"/>
+<rect x="66" y="380" width="8" height="96" rx="3" fill="#334155"/><rect x="58" y="470" width="24" height="8" rx="3" fill="#64748b"/>
+<rect x="176" y="380" width="8" height="96" rx="3" fill="#334155"/><rect x="168" y="470" width="24" height="8" rx="3" fill="#64748b"/>
+<path d="M70 470L180 420" stroke="#334155" stroke-width="4"/>
+<path d="M40 400H210V408H40Z" fill="#334155"/>
+<path d="M40 400L210 400L190 280L70 280Z" fill="url(#solm-pv)" stroke="#dbe6fe" stroke-width="4" stroke-linejoin="round"/>
+<path d="M74 400L94 280M108 400L118 280M142 400L142 280M176 400L166 280M47.5 370L205 370M55 340L200 340M62.5 310L195 310" stroke="#93b4fd" stroke-opacity=".55" stroke-width="1.5" fill="none"/>
+<path class="solm-glint" style="animation-delay:0.0s" d="M100 280L140 280L100 400L60 400Z" fill="#ffffff" opacity=".14"/>
+<ellipse cx="320" cy="478" rx="100" ry="9" fill="#050b1f" opacity=".45"/>
+<rect x="256" y="380" width="8" height="96" rx="3" fill="#334155"/><rect x="248" y="470" width="24" height="8" rx="3" fill="#64748b"/>
+<rect x="366" y="380" width="8" height="96" rx="3" fill="#334155"/><rect x="358" y="470" width="24" height="8" rx="3" fill="#64748b"/>
+<path d="M260 470L370 420" stroke="#334155" stroke-width="4"/>
+<path d="M230 400H400V408H230Z" fill="#334155"/>
+<path d="M230 400L400 400L380 280L260 280Z" fill="url(#solm-pv)" stroke="#dbe6fe" stroke-width="4" stroke-linejoin="round" filter="url(#solm-sh)"/>
+<path d="M264 400L284 280M298 400L308 280M332 400L332 280M366 400L356 280M237.5 370L395 370M245 340L390 340M252.5 310L385 310" stroke="#93b4fd" stroke-opacity=".55" stroke-width="1.5" fill="none"/>
+<path class="solm-glint" style="animation-delay:0.8s" d="M290 280L330 280L290 400L250 400Z" fill="#ffffff" opacity=".14"/>
+<ellipse cx="510" cy="478" rx="100" ry="9" fill="#050b1f" opacity=".45"/>
+<rect x="446" y="380" width="8" height="96" rx="3" fill="#334155"/><rect x="438" y="470" width="24" height="8" rx="3" fill="#64748b"/>
+<rect x="556" y="380" width="8" height="96" rx="3" fill="#334155"/><rect x="548" y="470" width="24" height="8" rx="3" fill="#64748b"/>
+<path d="M450 470L560 420" stroke="#334155" stroke-width="4"/>
+<path d="M420 400H590V408H420Z" fill="#334155"/>
+<path d="M420 400L590 400L570 280L450 280Z" fill="url(#solm-pv)" stroke="#dbe6fe" stroke-width="4" stroke-linejoin="round"/>
+<path d="M454 400L474 280M488 400L498 280M522 400L522 280M556 400L546 280M427.5 370L585 370M435 340L580 340M442.5 310L575 310" stroke="#93b4fd" stroke-opacity=".55" stroke-width="1.5" fill="none"/>
+<path class="solm-glint" style="animation-delay:1.6s" d="M480 280L520 280L480 400L440 400Z" fill="#ffffff" opacity=".14"/>
+<path class="solm-flow" d="M125 410V448H620" fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="8 24" stroke-linecap="round"/>
+<path class="solm-flow" d="M315 410V448H620M505 410V448H620" fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="8 24" stroke-linecap="round"/>
+<rect x="655" y="380" width="10" height="160" rx="3" fill="#334155"/><rect x="640" y="534" width="40" height="10" rx="3" fill="#64748b"/>
+<line x1="695" y1="398" x2="695" y2="330" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+<g filter="url(#solm-sh)"><rect x="623" y="402" width="90" height="82" rx="12" fill="#93b4fd"/><rect x="615" y="396" width="90" height="82" rx="12" fill="url(#solm-shell)"/></g>
+<rect x="627" y="408" width="66" height="30" rx="5" fill="#0b1838"/>
+<rect x="634" y="424" width="7" height="8" rx="1.5" fill="#4ade80"/>
+<rect x="645" y="418" width="7" height="14" rx="1.5" fill="#4ade80"/>
+<rect x="656" y="421" width="7" height="11" rx="1.5" fill="#4ade80"/>
+<rect x="667" y="414" width="7" height="18" rx="1.5" fill="#4ade80"/>
+<rect x="678" y="410" width="7" height="22" rx="1.5" fill="#4ade80"/>
+<circle class="solm-blink" cx="632" cy="454" r="4.5" fill="#22a04b"/><circle class="solm-blink" style="animation-delay:.7s" cx="647" cy="454" r="4.5" fill="#f7841a"/>
+<path d="M664 450H694M664 458H694M664 466H694" stroke="#93b4fd" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="606" y="440" width="12" height="16" rx="3" fill="#334155"/>
+<circle cx="695" cy="326" r="6" fill="#f7841a"/>
+<path class="solm-wave" d="M681.2 314.4A18 18 0 0 1 708.8 314.4" fill="none" stroke="#fdba74" stroke-width="3.5" stroke-linecap="round"/>
+<path class="solm-wave solm-w2" d="M670.5 305.4A32 32 0 0 1 719.5 305.4" fill="none" stroke="#fdba74" stroke-width="3.5" stroke-linecap="round"/>
+<path class="solm-wave solm-w3" d="M659.8 296.4A46 46 0 0 1 730.2 296.4" fill="none" stroke="#fdba74" stroke-width="3.5" stroke-linecap="round"/>
+<g class="solm-card"><g filter="url(#solm-sh)"><rect x="478" y="38" width="294" height="216" rx="18" fill="#f1f5f9"/></g>
+<circle cx="504" cy="66" r="12" fill="#f7841a"/><path d="M506 57L498 68H504L502 76L510 64H504Z" fill="#fff"/>
+<rect x="524" y="58" width="84" height="8" rx="4" fill="#142a63"/><rect x="524" y="71" width="52" height="6" rx="3" fill="#64748b"/>
+<rect x="702" y="56" width="54" height="20" rx="10" fill="#22a04b" fill-opacity=".15"/><circle class="solm-blink" cx="714" cy="66" r="4" fill="#22a04b"/><rect x="722" y="63" width="26" height="6" rx="3" fill="#22a04b"/>
+<path d="M498 104H754M498 134H754M498 164H754M498 194H754" stroke="#dbe6fe" stroke-width="1.5"/>
+<path class="solm-area" d="M498 190C526 188 542 180 562 172S598 152 618 150S656 130 678 120S722 100 754 92L754 194L498 194Z" fill="url(#solm-ar)"/>
+<path d="M498 176C540 173 580 170 620 167S700 160 754 158" fill="none" stroke="#5b8af9" stroke-width="2" stroke-dasharray="5 5"/>
+<path class="solm-curve" d="M498 190C526 188 542 180 562 172S598 152 618 150S656 130 678 120S722 100 754 92" pathLength="100" fill="none" stroke="#f7841a" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="0"/>
+<circle cx="754" cy="92" r="8" fill="#f7841a" opacity=".25"/><circle cx="754" cy="92" r="4.5" fill="#f7841a"/>
+<rect x="498" y="212" width="92" height="26" rx="7" fill="none" stroke="#334155" stroke-width="2.5"/><rect x="591" y="219" width="6" height="12" rx="2" fill="#334155"/>
+<rect class="solm-bat" x="503" y="217" width="66" height="16" rx="3" fill="#22a04b"/>
+<rect x="614" y="214" width="62" height="8" rx="4" fill="#142a63"/><rect x="614" y="228" width="40" height="6" rx="3" fill="#64748b"/>
+<rect x="690" y="214" width="62" height="8" rx="4" fill="#3563ea"/><rect x="690" y="228" width="34" height="6" rx="3" fill="#93b4fd"/>
+</g>
+</svg>

@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="farm-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1838"/><stop offset="1" stop-color="#142a63"/></linearGradient>
+<pattern id="farm-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/></pattern>
+<radialGradient id="farm-go"><stop offset="0" stop-color="#f7841a" stop-opacity="0.25"/><stop offset="1" stop-color="#f7841a" stop-opacity="0"/></radialGradient>
+<radialGradient id="farm-gb"><stop offset="0" stop-color="#5b8af9" stop-opacity="0.2"/><stop offset="1" stop-color="#5b8af9" stop-opacity="0"/></radialGradient>
+<linearGradient id="farm-shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f5f9"/><stop offset="1" stop-color="#dbe6fe"/></linearGradient>
+<linearGradient id="farm-pv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3563ea"/><stop offset="1" stop-color="#1a3480"/></linearGradient>
+<filter id="farm-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#050b1f" flood-opacity="0.55"/></filter>
+<linearGradient id="farm-gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a3480"/><stop offset="1" stop-color="#0b1838"/></linearGradient>
+<g id="farm-plant"><path d="M0 0V-44" stroke="#22a04b" stroke-width="3" stroke-linecap="round"/><path d="M0-10C-16-12-26-26-26-36C-12-32-3-24 0-10Z" fill="#22a04b"/><path d="M0-20C16-22 26-36 24-46C10-42 2-34 0-20Z" fill="#4ade80"/><path d="M0-34C-8-40-8-54 0-62C8-54 8-40 0-34Z" fill="#4ade80"/></g>
+</defs>
+<style>
+
+.farm-sway{transform-box:fill-box;transform-origin:50% 100%;animation:farm-sway 4s ease-in-out infinite}
+@keyframes farm-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.farm-wave{animation:farm-pulse 2.4s ease-in-out infinite}
+.farm-w2{animation-delay:.35s}.farm-w3{animation-delay:.7s}.farm-w4{animation-delay:1.05s}
+@keyframes farm-pulse{0%,100%{opacity:.1}40%{opacity:1}}
+.farm-drop{animation:farm-fall 1.8s ease-in infinite}
+@keyframes farm-fall{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(22px);opacity:0}}
+.farm-link{animation:farm-dash 1.6s linear infinite}
+@keyframes farm-dash{to{stroke-dashoffset:-24}}
+.farm-blink{animation:farm-blink 1.4s ease-in-out infinite}
+@keyframes farm-blink{0%,100%{opacity:1}50%{opacity:.2}}
+.farm-ripple{transform-box:fill-box;transform-origin:center;animation:farm-rip 2.6s ease-out infinite}
+@keyframes farm-rip{0%{transform:scale(.5);opacity:.9}100%{transform:scale(1.4);opacity:0}}
+.farm-card{animation:farm-float 6s ease-in-out infinite}
+@keyframes farm-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.farm-fill{transform-box:fill-box;transform-origin:0 50%;animation:farm-grow 5s ease-in-out infinite}
+@keyframes farm-grow{0%,100%{transform:scaleX(.55)}60%{transform:scaleX(1)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="800" height="600" fill="url(#farm-bg)"/>
+<rect width="800" height="600" fill="url(#farm-grid)"/>
+<circle cx="600" cy="270" r="320" fill="url(#farm-go)"/><circle cx="180" cy="140" r="280" fill="url(#farm-gb)"/>
+
+<circle cx="60" cy="60" r="1.8" fill="#dbe6fe" opacity=".6"/>
+<circle cx="150" cy="40" r="1.8" fill="#dbe6fe" opacity=".6"/>
+<circle cx="430" cy="50" r="1.8" fill="#dbe6fe" opacity=".6"/>
+<circle cx="520" cy="120" r="1.8" fill="#dbe6fe" opacity=".6"/>
+<circle cx="760" cy="40" r="1.8" fill="#dbe6fe" opacity=".6"/>
+<circle cx="90" cy="200" r="1.8" fill="#dbe6fe" opacity=".6"/>
+<circle cx="740" cy="230" r="1.8" fill="#dbe6fe" opacity=".6"/>
+<path d="M0 268C90 236 190 246 280 262S470 226 560 244S720 250 800 236V300H0Z" fill="#142a63"/>
+<path d="M0 286C140 270 260 280 400 276S660 268 800 280V300H0Z" fill="#1a3480" opacity=".6"/>
+<path d="M634 292L646 136M666 292L654 136" stroke="#93b4fd" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M634 292L663.2 256M666 292L636.8 256M636.8 256L660.6 222M663.2 256L639.4 222M639.4 222L658.2 190M660.6 222L641.8 190M641.8 190L656 162M658.2 190L644 162M644 162L654 136M656 162L646 136" stroke="#5b8af9" stroke-width="1.5" fill="none"/>
+<rect x="648" y="104" width="4" height="34" fill="#93b4fd"/><rect x="640" y="118" width="6" height="18" rx="2" fill="#dbe6fe"/><rect x="654" y="118" width="6" height="18" rx="2" fill="#dbe6fe"/>
+<circle class="farm-blink" cx="650" cy="102" r="5" fill="#f7841a"/>
+<rect x="668" y="270" width="34" height="22" rx="3" fill="#334155"/><rect x="674" y="276" width="10" height="6" fill="#fbbf24" opacity=".8"/>
+<path class="farm-wave" d="M637.9 109A14 14 0 0 1 637.9 95" fill="none" stroke="#fdba74" stroke-width="3" stroke-linecap="round"/>
+<path class="farm-wave farm-w2" d="M627.5 115A26 26 0 0 1 627.5 89" fill="none" stroke="#fdba74" stroke-width="3" stroke-linecap="round"/>
+<rect x="0" y="292" width="800" height="308" fill="url(#farm-gr)"/>
+<path d="M275.7 292L293.5 292L-800 600L-1000 600ZM311.2 292L329 292L-400 600L-600 600ZM346.7 292L364.5 292L0 600L-200 600ZM382.2 292L400 292L400 600L200 600ZM417.8 292L435.5 292L800 600L600 600ZM453.3 292L471 292L1200 600L1000 600ZM488.8 292L506.5 292L1600 600L1400 600Z" fill="#142a63"/>
+<path d="M0 506L800 488" stroke="#0b1838" stroke-width="9" stroke-linecap="round"/><path d="M0 504L800 486" stroke="#334155" stroke-width="6"/><path d="M0 502L800 484" stroke="#64748b" stroke-width="1.5"/>
+<g transform="translate(253.8 300) scale(0.17)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(298.8 300) scale(0.17)"><use class="farm-sway" style="animation-delay:-3.2s" xlink:href="#farm-plant"/></g>
+<g transform="translate(343.8 300) scale(0.17)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(388.8 300) scale(0.17)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(433.7 300) scale(0.17)"><use class="farm-sway" style="animation-delay:-3.2s" xlink:href="#farm-plant"/></g>
+<g transform="translate(478.7 300) scale(0.17)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(523.7 300) scale(0.17)"><use class="farm-sway" style="animation-delay:-3.2s" xlink:href="#farm-plant"/></g>
+<g transform="translate(207.7 312) scale(0.22)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<g transform="translate(266.9 312) scale(0.22)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(326 312) scale(0.22)"><use class="farm-sway" style="animation-delay:-3.2s" xlink:href="#farm-plant"/></g>
+<g transform="translate(385.2 312) scale(0.22)"><use class="farm-sway" style="animation-delay:-3.2s" xlink:href="#farm-plant"/></g>
+<g transform="translate(444.4 312) scale(0.22)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(503.6 312) scale(0.22)"><use class="farm-sway" style="animation-delay:-3.2s" xlink:href="#farm-plant"/></g>
+<g transform="translate(562.7 312) scale(0.22)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(146.2 328) scale(0.29)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<g transform="translate(224.3 328) scale(0.29)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<g transform="translate(302.4 328) scale(0.29)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(380.5 328) scale(0.29)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(458.6 328) scale(0.29)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<g transform="translate(536.7 328) scale(0.29)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(614.8 328) scale(0.29)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<g transform="translate(374 350) scale(0.39)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<g transform="translate(478.1 350) scale(0.39)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<g transform="translate(582.2 350) scale(0.39)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<g transform="translate(61.5 350) scale(0.39)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(686.4 350) scale(0.39)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<g transform="translate(365.1 380) scale(0.52)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<g transform="translate(504.7 380) scale(0.52)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(644.4 380) scale(0.52)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<g transform="translate(784 380) scale(0.52)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(85.8 380) scale(0.52)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<g transform="translate(353.3 420) scale(0.70)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(540.2 420) scale(0.70)"><use class="farm-sway" style="animation-delay:-3.2s" xlink:href="#farm-plant"/></g>
+<g transform="translate(727.2 420) scale(0.70)"><use class="farm-sway" style="animation-delay:-2.4s" xlink:href="#farm-plant"/></g>
+<g transform="translate(586.4 472) scale(0.93)"><use class="farm-sway" style="animation-delay:-0s" xlink:href="#farm-plant"/></g>
+<g transform="translate(89.3 472) scale(0.93)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<rect x="36" y="501.1" width="8" height="8" rx="2" fill="#3563ea"/>
+<ellipse cx="40" cy="533.1" rx="18" ry="4" fill="#3563ea" opacity=".3"/>
+<path class="farm-drop" style="animation-delay:0s" d="M40 509.1c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#93b4fd"/>
+<rect x="126" y="499.1" width="8" height="8" rx="2" fill="#3563ea"/>
+<ellipse cx="130" cy="531.1" rx="18" ry="4" fill="#3563ea" opacity=".3"/>
+<path class="farm-drop" style="animation-delay:0.5s" d="M130 507.1c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#93b4fd"/>
+<rect x="396" y="493" width="8" height="8" rx="2" fill="#3563ea"/>
+<ellipse cx="400" cy="525" rx="18" ry="4" fill="#3563ea" opacity=".3"/>
+<path class="farm-drop" style="animation-delay:0s" d="M400 501c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#93b4fd"/>
+<rect x="486" y="491" width="8" height="8" rx="2" fill="#3563ea"/>
+<ellipse cx="490" cy="523" rx="18" ry="4" fill="#3563ea" opacity=".3"/>
+<path class="farm-drop" style="animation-delay:0.5s" d="M490 499c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#93b4fd"/>
+<rect x="576" y="488.9" width="8" height="8" rx="2" fill="#3563ea"/>
+<ellipse cx="580" cy="521" rx="18" ry="4" fill="#3563ea" opacity=".3"/>
+<path class="farm-drop" style="animation-delay:0.9s" d="M580 496.9c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#93b4fd"/>
+<rect x="666" y="486.9" width="8" height="8" rx="2" fill="#3563ea"/>
+<ellipse cx="670" cy="518.9" rx="18" ry="4" fill="#3563ea" opacity=".3"/>
+<path class="farm-drop" style="animation-delay:1.4s" d="M670 494.9c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#93b4fd"/>
+<rect x="756" y="484.9" width="8" height="8" rx="2" fill="#3563ea"/>
+<ellipse cx="760" cy="516.9" rx="18" ry="4" fill="#3563ea" opacity=".3"/>
+<path class="farm-drop" style="animation-delay:0s" d="M760 492.9c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#93b4fd"/>
+<g transform="translate(-11.2 540) scale(1.23)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<g transform="translate(646.7 540) scale(1.23)"><use class="farm-sway" style="animation-delay:-0.8s" xlink:href="#farm-plant"/></g>
+<g transform="translate(710.7 612) scale(1.55)"><use class="farm-sway" style="animation-delay:-1.6s" xlink:href="#farm-plant"/></g>
+<rect x="160" y="504" width="180" height="110" rx="16" fill="#0b1838" stroke="#5b8af9" stroke-opacity=".7" stroke-width="2" stroke-dasharray="6 6"/>
+<circle cx="180" cy="530" r="3" fill="#334155"/>
+<circle cx="196" cy="568" r="2" fill="#334155"/>
+<circle cx="214" cy="590" r="3" fill="#334155"/>
+<circle cx="300" cy="528" r="2" fill="#334155"/>
+<circle cx="318" cy="560" r="3" fill="#334155"/>
+<circle cx="290" cy="590" r="2" fill="#334155"/>
+<circle cx="226" cy="540" r="2" fill="#334155"/>
+<circle cx="276" cy="548" r="2" fill="#334155"/>
+<path d="M190 548c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#5b8af9" opacity=".7"/>
+<path d="M310 580c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#5b8af9" opacity=".7"/>
+<path d="M282 522c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#5b8af9" opacity=".7"/>
+<path d="M208 520c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" fill="#5b8af9" opacity=".7"/>
+<rect x="244" y="370" width="12" height="150" fill="#64748b"/>
+<rect x="236" y="516" width="28" height="26" rx="5" fill="#64748b"/><rect x="236" y="526" width="28" height="4" fill="#f7841a"/>
+<path d="M242 542V588M258 542V588" stroke="#dbe6fe" stroke-width="5" stroke-linecap="round"/>
+<ellipse class="farm-ripple" cx="250" cy="572" rx="34" ry="12" fill="none" stroke="#4ade80" stroke-width="2"/>
+<ellipse class="farm-ripple" style="animation-delay:1.3s" cx="250" cy="572" rx="34" ry="12" fill="none" stroke="#4ade80" stroke-width="2"/>
+<ellipse cx="250" cy="500" rx="30" ry="6" fill="#050b1f" opacity=".5"/>
+<rect x="244" y="226" width="12" height="150" fill="#64748b"/><rect x="244" y="226" width="4" height="150" fill="#93b4fd" opacity=".5"/>
+<path d="M250 228L236 212M250 228L264 212" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+<g filter="url(#farm-sh)"><path d="M178 220L190 184H282L294 220Z" fill="url(#farm-pv)" stroke="#dbe6fe" stroke-width="3" stroke-linejoin="round"/></g>
+<path d="M207 220L213 184M236 220L236 184M265 220L259 184M184 202H288" stroke="#93b4fd" stroke-opacity=".6" stroke-width="1.5"/>
+<path d="M206 184L222 184L208 220L192 220Z" fill="#fff" opacity=".15"/>
+<path d="M290 300H312" stroke="#64748b" stroke-width="5" stroke-linecap="round"/><path d="M312 302V150" stroke="#93b4fd" stroke-width="4" stroke-linecap="round"/>
+<circle cx="312" cy="146" r="6" fill="#f7841a"/>
+<path class="farm-wave" d="M323.5 129.6A20 20 0 0 1 330.1 154.5" fill="none" stroke="#fdba74" stroke-width="3.5" stroke-linecap="round"/>
+<path class="farm-wave farm-w2" d="M333.8 114.9A38 38 0 0 1 346.4 162.1" fill="none" stroke="#fdba74" stroke-width="3.5" stroke-linecap="round"/>
+<path class="farm-wave farm-w3" d="M344.1 100.1A56 56 0 0 1 362.8 169.7" fill="none" stroke="#fdba74" stroke-width="3.5" stroke-linecap="round"/>
+<path class="farm-wave farm-w4" d="M354.4 85.4A74 74 0 0 1 379.1 177.3" fill="none" stroke="#fdba74" stroke-width="3.5" stroke-linecap="round"/>
+<path class="farm-link" d="M330 128Q480 40 640 98" fill="none" stroke="#fb9a3c" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+<g filter="url(#farm-sh)"><rect x="216" y="278" width="80" height="96" rx="12" fill="#93b4fd"/><rect x="208" y="270" width="80" height="96" rx="12" fill="url(#farm-shell)"/></g>
+<rect x="218" y="282" width="60" height="34" rx="6" fill="#0b1838"/>
+<path d="M234 289c-5 7-7 10-7 13a7 7 0 0 0 14 0c0-3-2-6-7-13z" fill="#5b8af9"/>
+<rect x="250" y="300" width="5" height="10" rx="1.5" fill="#4ade80"/>
+<rect x="258" y="294" width="5" height="16" rx="1.5" fill="#4ade80"/>
+<rect x="266" y="288" width="5" height="22" rx="1.5" fill="#4ade80"/>
+<circle class="farm-blink" cx="222" cy="330" r="4.5" fill="#22a04b"/><circle class="farm-blink" style="animation-delay:.6s" cx="236" cy="330" r="4.5" fill="#f7841a"/>
+<path d="M250 328H278M250 336H278M250 344H278" stroke="#93b4fd" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="240" y="352" width="16" height="6" rx="3" fill="#64748b"/>
+<path class="farm-link" d="M296 300Q330 290 350 262" fill="none" stroke="#93b4fd" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+<g class="farm-card"><g filter="url(#farm-sh)"><rect x="346" y="196" width="140" height="66" rx="14" fill="#f1f5f9"/></g>
+<circle cx="374" cy="229" r="17" fill="#3563ea" fill-opacity=".15"/><path d="M374 216c-6 8-8 12-8 15a8 8 0 0 0 16 0c0-3-2-7-8-15z" fill="#3563ea"/>
+<rect x="400" y="212" width="66" height="8" rx="4" fill="#142a63"/><rect x="400" y="226" width="44" height="6" rx="3" fill="#64748b"/>
+<rect x="400" y="240" width="72" height="8" rx="4" fill="#dbe6fe"/><rect class="farm-fill" x="400" y="240" width="52" height="8" rx="4" fill="#22a04b"/>
+</g>
+</svg>
