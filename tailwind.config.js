@@ -1,12 +1,91 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './lib/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    container: { center: true, padding: '1.25rem', screens: { '2xl': '1200px' } },
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      // Pulled from the CTIT logo: navy wordmark, orange "TECHNOLOGIES", green Africa.
+      colors: {
+        brand: {
+          50: '#eef4ff',
+          100: '#dbe6fe',
+          200: '#bfd3fe',
+          300: '#93b4fd',
+          400: '#5b8af9',
+          500: '#3563ea',
+          600: '#1f47c9',
+          700: '#1a3aa3',
+          800: '#1a3480',
+          900: '#142a63',
+          950: '#0b1838',
+        },
+        accent: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb9a3c',
+          500: '#f7841a',
+          600: '#e06a0b',
+          700: '#b9500c',
+        },
+        leaf: {
+          50: '#f0fdf3',
+          100: '#dcfce4',
+          400: '#4ade80',
+          500: '#22a04b',
+          600: '#16823a',
+          700: '#156631',
+        },
+        ink: '#0b1220',
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: 0, transform: 'translateY(12px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        'fade-in': { '0%': { opacity: 0, transform: 'translateX(-4px)' }, '100%': { opacity: 1, transform: 'none' } },
+        marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+        'packet-up': {
+          '0%': { top: 'calc(100% - 28px)', opacity: 0 },
+          '10%': { opacity: 1 },
+          '90%': { opacity: 1 },
+          '100%': { top: '16px', opacity: 0 },
+        },
+        blink: { '0%, 49%': { opacity: 1 }, '50%, 100%': { opacity: 0 } },
+        'drift-l': { '0%, 100%': { transform: 'translateX(0)' }, '50%': { transform: 'translateX(-6px)' } },
+        'drift-r': { '0%, 100%': { transform: 'translateX(0)' }, '50%': { transform: 'translateX(6px)' } },
+        glow: { '0%, 100%': { opacity: 0.12 }, '50%': { opacity: 0.32 } },
+        trace: { '0%': { strokeDashoffset: 800 }, '100%': { strokeDashoffset: 0 } },
+        'spin-slow': { to: { transform: 'rotate(360deg)' } },
+        shimmer: { '0%': { backgroundPosition: '200% 0' }, '100%': { backgroundPosition: '-200% 0' } },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.7s ease-out both',
+        'fade-in': 'fade-in 0.4s ease-out both',
+        float: 'float 6s ease-in-out infinite',
+        marquee: 'marquee 40s linear infinite',
+        'packet-up': 'packet-up 3.2s ease-in-out infinite',
+        blink: 'blink 1s steps(1) infinite',
+        'drift-l': 'drift-l 6s ease-in-out infinite',
+        'drift-r': 'drift-r 6s ease-in-out infinite',
+        glow: 'glow 4s ease-in-out infinite',
+        trace: 'trace 7s linear infinite',
+        'spin-slow': 'spin-slow 30s linear infinite',
+        shimmer: 'shimmer 6s linear infinite',
+      },
+    },
   },
   plugins: [],
-}
+};

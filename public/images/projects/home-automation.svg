@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="ha-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1838"/><stop offset="1" stop-color="#142a63"/></linearGradient>
+<pattern id="ha-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/></pattern>
+<radialGradient id="ha-go"><stop offset="0" stop-color="#f7841a" stop-opacity="0.25"/><stop offset="1" stop-color="#f7841a" stop-opacity="0"/></radialGradient>
+<radialGradient id="ha-gb"><stop offset="0" stop-color="#5b8af9" stop-opacity="0.2"/><stop offset="1" stop-color="#5b8af9" stop-opacity="0"/></radialGradient>
+<linearGradient id="ha-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24428f"/><stop offset="1" stop-color="#1a3480"/></linearGradient>
+<linearGradient id="ha-roof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fb9a3c"/><stop offset="1" stop-color="#f7841a"/></linearGradient>
+<linearGradient id="ha-cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbbf24" stop-opacity="0.5"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></linearGradient>
+<radialGradient id="ha-halo"><stop offset="0" stop-color="#fbbf24" stop-opacity="0.7"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+<linearGradient id="ha-scr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a3480"/><stop offset="1" stop-color="#142a63"/></linearGradient>
+<linearGradient id="ha-glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1838"/><stop offset="1" stop-color="#1a3480"/></linearGradient>
+<linearGradient id="ha-sofa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b8af9"/><stop offset="1" stop-color="#3563ea"/></linearGradient>
+<filter id="ha-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#050b1f" flood-opacity="0.55"/></filter>
+</defs>
+<style>
+.ha-glow{animation:ha-light 8s ease-in-out infinite}
+@keyframes ha-light{0%,42%{opacity:1}50%,92%{opacity:.06}100%{opacity:1}}
+.ha-dark{animation:ha-dim 8s ease-in-out infinite}
+@keyframes ha-dim{0%,42%{opacity:0}50%,92%{opacity:.35}100%{opacity:0}}
+.ha-fan{transform-box:fill-box;transform-origin:center;animation:ha-spin .7s linear infinite}
+@keyframes ha-spin{to{transform:rotate(360deg)}}
+.ha-arc{animation:ha-pulse 2.4s ease-out infinite}
+.ha-a2{animation-delay:.4s}.ha-a3{animation-delay:.8s}
+@keyframes ha-pulse{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
+.ha-flow{stroke-dasharray:4 8;animation:ha-dash 1.4s linear infinite}
+@keyframes ha-dash{to{stroke-dashoffset:-24}}
+.ha-knob{transform-box:fill-box;transform-origin:center;animation:ha-knob 8s ease-in-out infinite}
+@keyframes ha-knob{0%,42%{transform:translateX(0)}50%,92%{transform:translateX(-11px)}100%{transform:translateX(0)}}
+.ha-tog{animation:ha-tog 8s ease-in-out infinite}
+@keyframes ha-tog{0%,42%{fill:#22a04b}50%,92%{fill:#64748b}100%{fill:#22a04b}}
+.ha-blink{animation:ha-blink 1.6s ease-in-out infinite}
+.ha-b2{animation-delay:.6s}
+@keyframes ha-blink{0%,100%{opacity:1}50%{opacity:.2}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="800" height="600" fill="url(#ha-bg)"/>
+<rect width="800" height="600" fill="url(#ha-grid)"/>
+<circle cx="640" cy="140" r="330" fill="url(#ha-go)"/>
+<circle cx="140" cy="480" r="320" fill="url(#ha-gb)"/>
+<g fill="#dbe6fe" opacity="0.6"><circle cx="80" cy="70" r="1.5"/><circle cx="170" cy="36" r="1.2"/><circle cx="520" cy="44" r="1.5"/><circle cx="730" cy="60" r="1.2"/><circle cx="760" cy="200" r="1.5"/><circle cx="36" cy="150" r="1.2"/></g>
+<!-- ground -->
+<rect y="484" width="800" height="116" fill="#0b1838" opacity="0.55"/>
+<path d="M0 486H800" stroke="#3563ea" stroke-width="2" opacity="0.5"/>
+<ellipse cx="36" cy="490" rx="44" ry="20" fill="#22a04b"/><ellipse cx="22" cy="480" rx="20" ry="14" fill="#4ade80" opacity="0.7"/>
+<!-- house -->
+<g filter="url(#ha-sh)">
+<polygon points="44,194 330,64 616,194" fill="url(#ha-roof)"/>
+<polygon points="104,184 330,86 556,184" fill="#142a63"/>
+<rect x="64" y="182" width="532" height="306" rx="4" fill="#334155"/>
+</g>
+<rect x="80" y="200" width="500" height="284" fill="url(#ha-wall)"/>
+<rect x="80" y="440" width="500" height="44" fill="#142a63"/>
+<path d="M80 440H580M80 462H580M160 440V462M300 462V484M440 440V462M520 462V484" stroke="#1a3480" stroke-width="2"/>
+<path d="M80 440H580" stroke="#3563ea" stroke-width="3"/>
+<!-- attic router -->
+<g>
+<path d="M308 158L302 134M352 158L358 134" stroke="#f1f5f9" stroke-width="3" stroke-linecap="round"/>
+<rect x="298" y="156" width="64" height="20" rx="6" fill="#f1f5f9"/>
+<circle cx="312" cy="166" r="2.5" fill="#22a04b" class="ha-blink"/><circle cx="322" cy="166" r="2.5" fill="#3563ea" class="ha-blink ha-b2"/><circle cx="332" cy="166" r="2.5" fill="#f7841a"/>
+<path d="M314 128a22 22 0 0 1 32 0" fill="none" stroke="#93b4fd" stroke-width="2.5" stroke-linecap="round" class="ha-arc"/>
+<path d="M306 118a34 34 0 0 1 48 0" fill="none" stroke="#93b4fd" stroke-width="2.5" stroke-linecap="round" class="ha-arc ha-a2"/>
+</g>
+<!-- window -->
+<path d="M370 222h16v106q-8 -8 -16 0z" fill="#fb9a3c" opacity="0.85"/>
+<path d="M480 222h-16v106q8 -8 16 0z" fill="#fb9a3c" opacity="0.85"/>
+<rect x="380" y="228" width="90" height="92" rx="4" fill="#f1f5f9"/>
+<rect x="386" y="234" width="78" height="80" rx="2" fill="url(#ha-glass)"/>
+<circle cx="446" cy="252" r="9" fill="#fdba74"/>
+<circle cx="404" cy="250" r="1.4" fill="#dbe6fe"/><circle cx="420" cy="290" r="1.2" fill="#dbe6fe"/><circle cx="452" cy="296" r="1.4" fill="#dbe6fe"/>
+<path d="M425 234V314M386 274H464" stroke="#f1f5f9" stroke-width="3"/>
+<rect x="366" y="216" width="118" height="6" rx="3" fill="#dbe6fe"/>
+<!-- wiring in wall -->
+<path d="M188 380H204V206H240" fill="none" stroke="#fb9a3c" stroke-width="2" opacity="0.35"/>
+<path d="M188 380H204V206H240" fill="none" stroke="#fdba74" stroke-width="2" class="ha-flow"/>
+<path d="M188 404H212V436H560V430" fill="none" stroke="#fb9a3c" stroke-width="2" opacity="0.35"/>
+<path d="M188 404H212V436H560V430" fill="none" stroke="#fdba74" stroke-width="2" class="ha-flow"/>
+<!-- wall switch -->
+<path d="M140 362V336" stroke="#fb9a3c" stroke-width="2"/>
+<rect x="112" y="290" width="28" height="46" rx="5" fill="#f1f5f9"/>
+<rect x="119" y="298" width="14" height="22" rx="3" fill="#dbe6fe" stroke="#93b4fd" stroke-width="1.5"/>
+<!-- wall box cutaway with controller -->
+<rect x="96" y="350" width="92" height="76" rx="6" fill="#0b1838" stroke="#fb9a3c" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="108" y="362" width="68" height="52" rx="4" fill="#142a63" stroke="#5b8af9" stroke-width="2"/>
+<rect x="116" y="368" width="34" height="28" rx="2" fill="#93b4fd"/>
+<rect x="119" y="376" width="28" height="17" rx="1" fill="#dbe6fe"/>
+<path d="M118 372h6v-2h4v2h4v-2h4v2h4v-2h6" fill="none" stroke="#3563ea" stroke-width="1.2"/>
+<path d="M112 409H172M171 366V404" stroke="#fbbf24" stroke-width="3" stroke-dasharray="2 3"/>
+<rect x="152" y="396" width="12" height="8" rx="1" fill="#64748b"/>
+<circle cx="160" cy="374" r="2.5" fill="#5b8af9" class="ha-blink"/><circle cx="160" cy="384" r="2.5" fill="#f7841a" class="ha-blink ha-b2"/>
+<!-- rug, sofa, plant -->
+<ellipse cx="260" cy="454" rx="130" ry="11" fill="#f7841a" opacity="0.28"/>
+<rect x="184" y="432" width="6" height="10" fill="#0b1838"/><rect x="330" y="432" width="6" height="10" fill="#0b1838"/>
+<rect x="182" y="378" width="156" height="42" rx="12" fill="#3563ea"/>
+<rect x="196" y="388" width="42" height="26" rx="8" fill="#fb9a3c"/><rect x="284" y="388" width="42" height="26" rx="8" fill="#fdba74"/>
+<rect x="174" y="408" width="172" height="26" rx="10" fill="url(#ha-sofa)"/>
+<rect x="164" y="394" width="24" height="42" rx="10" fill="#3563ea"/><rect x="332" y="394" width="24" height="42" rx="10" fill="#3563ea"/>
+<path d="M390 412h30l-4 28h-22z" fill="#fb9a3c"/>
+<g fill="#22a04b"><ellipse cx="398" cy="394" rx="6" ry="18" transform="rotate(-25 398 394)"/><ellipse cx="414" cy="392" rx="6" ry="18" transform="rotate(25 414 392)"/></g>
+<ellipse cx="406" cy="388" rx="6" ry="20" fill="#4ade80"/>
+<!-- fan -->
+<ellipse cx="500" cy="440" rx="26" ry="6" fill="#334155"/>
+<rect x="497" y="332" width="6" height="108" rx="3" fill="#93b4fd"/>
+<rect x="490" y="320" width="20" height="16" rx="5" fill="#dbe6fe"/>
+<circle cx="500" cy="300" r="40" fill="#dbe6fe" fill-opacity="0.12" stroke="#93b4fd" stroke-width="2"/>
+<g class="ha-fan">
+<circle cx="500" cy="300" r="36" fill="none"/>
+<g fill="#5b8af9"><ellipse cx="500" cy="281" rx="9" ry="18"/><ellipse cx="500" cy="281" rx="9" ry="18" transform="rotate(120 500 300)"/><ellipse cx="500" cy="281" rx="9" ry="18" transform="rotate(240 500 300)"/></g>
+</g>
+<path d="M500 262V338M462 300H538" stroke="#93b4fd" stroke-width="1" opacity="0.5"/>
+<circle cx="500" cy="300" r="40" fill="none" stroke="#93b4fd" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>
+<circle cx="500" cy="300" r="7" fill="#f1f5f9"/>
+<path d="M512 440Q528 448 544 440Q558 434 560 428" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+<!-- smart plug -->
+<rect x="547" y="392" width="26" height="38" rx="6" fill="#f1f5f9"/>
+<circle cx="560" cy="401" r="3.5" fill="#4ade80" class="ha-blink"/>
+<rect x="554" y="410" width="2.5" height="8" rx="1" fill="#334155"/><rect x="563" y="410" width="2.5" height="8" rx="1" fill="#334155"/>
+<!-- dim room when light off -->
+<rect x="80" y="200" width="500" height="284" fill="#020617" opacity="0" class="ha-dark"/>
+<!-- ceiling light -->
+<path d="M250 200V228" stroke="#dbe6fe" stroke-width="2"/>
+<circle cx="250" cy="250" r="7" fill="#64748b"/>
+<g class="ha-glow">
+<polygon points="236,252 264,252 352,440 148,440" fill="url(#ha-cone)"/>
+<ellipse cx="250" cy="444" rx="104" ry="8" fill="#fbbf24" opacity="0.25"/>
+<circle cx="250" cy="250" r="48" fill="url(#ha-halo)"/>
+<circle cx="250" cy="250" r="7" fill="#fbbf24"/>
+<circle cx="126" cy="328" r="2.5" fill="#4ade80"/>
+</g>
+<path d="M228 248Q228 226 250 226Q272 226 272 248Z" fill="#f1f5f9"/>
+<!-- cloud + links -->
+<path d="M364 146Q520 92 668 144" fill="none" stroke="#93b4fd" stroke-width="2" opacity="0.7" class="ha-flow"/>
+<g fill="#dbe6fe"><rect x="664" y="132" width="76" height="26" rx="13"/><circle cx="688" cy="132" r="16"/><circle cx="714" cy="126" r="20"/></g>
+<path d="M698 142l8 8 14 -16" fill="none" stroke="#22a04b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M590 214Q430 116 272 232" fill="none" stroke="#93b4fd" stroke-width="2" opacity="0.8" class="ha-flow"/>
+<path d="M596 262Q566 276 542 292" fill="none" stroke="#93b4fd" stroke-width="2" opacity="0.8" class="ha-flow"/>
+<path d="M604 300Q592 360 576 396" fill="none" stroke="#93b4fd" stroke-width="2" opacity="0.8" class="ha-flow"/>
+<!-- phone -->
+<g transform="rotate(-8 690 390)">
+<g filter="url(#ha-sh)"><rect x="616" y="236" width="148" height="300" rx="22" fill="#0b1838" stroke="#93b4fd" stroke-width="2"/></g>
+<rect x="626" y="248" width="128" height="276" rx="14" fill="url(#ha-scr)"/>
+<rect x="670" y="254" width="40" height="6" rx="3" fill="#0b1838"/>
+<circle cx="644" cy="278" r="8" fill="#fb9a3c"/>
+<rect x="658" y="272" width="52" height="5" rx="2.5" fill="#dbe6fe"/><rect x="658" y="281" width="32" height="4" rx="2" fill="#93b4fd" opacity="0.7"/>
+<rect x="636" y="296" width="108" height="62" rx="12" fill="#3563ea"/>
+<circle cx="658" cy="318" r="9" fill="#64748b"/><circle cx="658" cy="318" r="9" fill="#fbbf24" class="ha-glow"/>
+<rect x="654" y="328" width="8" height="5" rx="1" fill="#f1f5f9"/>
+<rect x="676" y="312" width="52" height="5" rx="2.5" fill="#f1f5f9"/><rect x="676" y="322" width="34" height="4" rx="2" fill="#dbe6fe"/>
+<rect x="646" y="343" width="88" height="5" rx="2.5" fill="#1a3480"/><rect x="646" y="343" width="58" height="5" rx="2.5" fill="#fbbf24"/>
+<circle cx="704" cy="345.5" r="5" fill="#f1f5f9"/>
+<g stroke-width="1.5">
+<rect x="636" y="368" width="108" height="34" rx="9" fill="#1a3480" stroke="#3563ea"/>
+<rect x="636" y="410" width="108" height="34" rx="9" fill="#1a3480" stroke="#3563ea"/>
+<rect x="636" y="452" width="108" height="34" rx="9" fill="#1a3480" stroke="#3563ea"/>
+<circle cx="652" cy="385" r="9" fill="#142a63" stroke="#fbbf24"/>
+<circle cx="652" cy="427" r="9" fill="#142a63" stroke="#5b8af9"/>
+<circle cx="652" cy="469" r="9" fill="#142a63" stroke="#4ade80"/>
+</g>
+<circle cx="652" cy="385" r="3" fill="#fbbf24"/>
+<path d="M652 421v12M646 427h12" stroke="#5b8af9" stroke-width="2" stroke-linecap="round"/>
+<rect x="648" y="464" width="8" height="10" rx="2" fill="#4ade80"/>
+<g fill="#dbe6fe"><rect x="668" y="380" width="34" height="5" rx="2.5"/><rect x="668" y="422" width="30" height="5" rx="2.5"/><rect x="668" y="464" width="36" height="5" rx="2.5"/></g>
+<g fill="#93b4fd" opacity="0.6"><rect x="668" y="389" width="22" height="4" rx="2"/><rect x="668" y="431" width="18" height="4" rx="2"/><rect x="668" y="473" width="24" height="4" rx="2"/></g>
+<rect x="712" y="379" width="24" height="12" rx="6" fill="#22a04b" class="ha-tog"/>
+<circle cx="730" cy="385" r="4.5" fill="#f1f5f9" class="ha-knob"/>
+<rect x="712" y="421" width="24" height="12" rx="6" fill="#22a04b"/><circle cx="730" cy="427" r="4.5" fill="#f1f5f9"/>
+<rect x="712" y="463" width="24" height="12" rx="6" fill="#22a04b"/><circle cx="730" cy="469" r="4.5" fill="#f1f5f9"/>
+<rect x="670" y="508" width="40" height="4" rx="2" fill="#93b4fd"/>
+</g>
+<!-- signal arcs from phone -->
+<g fill="none" stroke="#fb9a3c" stroke-width="3" stroke-linecap="round">
+<path d="M588.2 233.2A16 16 0 0 1 601.2 220.2" class="ha-arc"/>
+<path d="M576.4 231.1A28 28 0 0 1 599.1 208.4" class="ha-arc ha-a2"/>
+<path d="M564.6 229.1A40 40 0 0 1 597.1 196.6" class="ha-arc ha-a3"/>
+</g>
+</svg>
